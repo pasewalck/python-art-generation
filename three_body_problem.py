@@ -1,12 +1,9 @@
 import math
-import os
-import random
 from math import floor
 
 import numpy as np
 
 from PIL import Image
-from alive_progress import alive_bar
 
 class Body:
     def __init__(self,x,y,vx,vy,mass=10.0):
