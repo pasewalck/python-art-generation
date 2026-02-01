@@ -5,5 +5,6 @@ description = "Add your description here"
 requires-python = ">=3.11"
 dependencies = [
     "alive-progress>=3.3.0",
+    "numpy>=2.4.1",
     "pillow>=12.1.0",
 ]
