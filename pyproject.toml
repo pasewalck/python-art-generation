@@ -7,4 +7,5 @@ dependencies = [
     "alive-progress>=3.3.0",
     "numpy>=2.4.1",
     "pillow>=12.1.0",
+    "webcolors>=25.10.0",
 ]
