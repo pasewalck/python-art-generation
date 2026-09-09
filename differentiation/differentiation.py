@@ -27,10 +27,10 @@ def main():
     res = (math.pi/128)
 
     for col in range(width):
-        x0 = (col-width/2)*res
+        x0 = (col)*res
         a_diff_y = diff_f(x0)
         for row in range(height):
-            c_h = res*((height - row + 1)/height)
+            c_h = (math.pi/8)*((height - row)/height)
             n_diff_y = diff_numeric(f,x0,c_h)
             diff_diff = math.fabs(n_diff_y - a_diff_y)
             if diff_diff >= biggest_diff_diff:
@@ -46,8 +46,8 @@ def main():
         x0 = (col-width/2)*(math.pi/64)
         y = f(x0)
         diff_y = diff_f(x0)
-        img.putpixel((col, math.floor(y/res)+height//2), (255, 0, 0))
-        img.putpixel((col, math.floor(diff_y/res)+height//2), (0, 0, 200))
+        img.putpixel((col, math.floor(-y/res)+height//2), (255, 0, 0))
+        img.putpixel((col, math.floor(-diff_y/res)+height//2), (0, 0, 200))
 
     img.show()
 
